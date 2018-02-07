@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdbool.h>
+void f(int a, bool *x){
+while(a>0){
+    if(a&1){
+        *x=false;
+        break;
+    }
+    a=a/10;
+    *x=true;
+}
+}
+int main(){
+int a=223;
+bool x=true;
+printf("%d",x);
+f(a,&x);
+printf("%d",x);
+return 0;
+}
