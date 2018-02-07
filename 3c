@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int f(int tab[], int n){
+    int max=tab[0];
+    int min=tab[0];
+    for(int i=1; i<n; i++){
+           if(tab[i]>max){
+            max=tab[i];
+           }
+           if(tab[i]<min){
+            min=tab[i];
+           }
+    }
+    return max-min;
+}
+
+int main(){
+    int n=9;
+int tab[9]={1,2,3,4,5,16,7,8,9};
+printf("%d",f(tab,n));
+return 0;
+}
