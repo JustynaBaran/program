@@ -1,0 +1,18 @@
+#include<stdbool.h>
+#include<stdlib.h>
+#include<time.h>
+int *f(float a, float b, int *c){
+*c=(int)b-(int)a;
+if(*c>0)
+    return (int*)malloc(*c*sizeof(int));
+return NULL;
+}
+
+int main(){
+float a,b;
+int c=0;
+scanf("<%f;%f>",&a,&b);
+if(f(a,b,&c) !=NULL)
+    printf("%d\n",c);
+return 0;
+}
